@@ -3,58 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Mismo Barco | No estás solo</title>
+    <title>El mismo barco | No estás solo</title>
     <meta name="description" content="Un espacio para recordar que no estás solo. Una experiencia compartida de duda, proceso y claridad.">
 
     <link rel="canonical" href="https://elmismobarco.com/">
 
-    <!-- SCHEMA OPTIMIZADO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+    <!-- SCHEMA ALINEADO -->
+    <script type="application/ld+json">
     {
-      "@type": "Person",
-      "@id": "https://lubezky.com/#sergio",
-      "name": "Sergio Lubezky",
-      "url": "https://lubezky.com/",
-      "sameAs": [
-        "https://lubezky.com/",
-        "https://elmismobarco.com/",
-        "https://inteligencia.com/",
-        "https://unnuevopuntodevista.com/",
-        "https://liderazgointerino.com/",
-        "https://coachdefoto.com/",
-        "https://musica.sergiolubezky.com/"
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://lubezky.com/#sergio",
+          "name": "Sergio Lubezky",
+          "url": "https://lubezky.com/",
+          "sameAs": [
+            "https://lubezky.com/",
+            "https://elmismobarco.com/",
+            "https://inteligencia.com/",
+            "https://unnuevopuntodevista.com/",
+            "https://liderazgointerino.com/",
+            "https://coachdefoto.com/",
+            "https://musica.sergiolubezky.com/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://elmismobarco.com/#website",
+          "url": "https://elmismobarco.com/",
+          "name": "El Mismo Barco",
+          "publisher": { "@id": "https://lubezky.com/#sergio" },
+          "about": { "@id": "https://lubezky.com/#sergio" },
+          "inLanguage": "es"
+        },
+        {
+          "@type": "Blog",
+          "@id": "https://elmismobarco.com/#blog",
+          "url": "https://elmismobarco.com/",
+          "name": "El Mismo Barco",
+          "isPartOf": { "@id": "https://elmismobarco.com/#website" },
+          "author": { "@id": "https://lubezky.com/#sergio" },
+          "inLanguage": "es",
+          "about": [
+            { "@type": "Thing", "name": "Resiliencia" },
+            { "@type": "Thing", "name": "Comunidad" },
+            { "@type": "Thing", "name": "Experiencia compartida" }
+          ]
+        }
       ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://elmismobarco.com/#website",
-      "url": "https://elmismobarco.com/",
-      "name": "El Mismo Barco",
-      "publisher": { "@id": "https://lubezky.com/#sergio" },
-      "about": { "@id": "https://lubezky.com/#sergio" },
-      "inLanguage": "es",
-      "description": "Reflexiones sobre resiliencia, comunidad y el propósito compartido en tiempos de cambio."
-    },
-    {
-      "@type": "Blog",
-      "@id": "https://elmismobarco.com/#blog",
-      "url": "https://elmismobarco.com/",
-      "name": "El Mismo Barco",
-      "isPartOf": { "@id": "https://elmismobarco.com/#website" },
-      "author": { "@id": "https://lubezky.com/#sergio" },
-      "about": [
-        { "@type": "Thing", "name": "Resiliencia" },
-        { "@type": "Thing", "name": "Comunidad" },
-        { "@type": "Thing", "name": "Experiencia compartida" }
-      ],
-      "inLanguage": "es"
     }
-  ]
-}
-</script>
+    </script>
 
     <style>
         body { 
@@ -122,7 +121,7 @@
             text-decoration: none; 
             color: inherit; 
             display: block; 
-            margin-bottom: 10px; 
+            margin-bottom: 2px; 
         }
 
         .name { 
@@ -130,6 +129,30 @@
             font-size: 1rem; 
             letter-spacing: 1.5px; 
             text-transform: uppercase; 
+        }
+
+        .footer-bio {
+            max-width: 650px;
+            margin: 0 auto 30px auto; 
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .footer-bio p { margin: 0; }
+
+        .footer-bio a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .footer-bio a:hover {
+            border-bottom: 1px solid #1a1a1a;
+            background-color: #f9f9f9;
+            color: #000;
         }
 
         .social-nav { 
@@ -157,34 +180,6 @@
             margin-left: 12px; 
             color: #ccc; 
         }
-
-.footer-bio {
-    max-width: 650px;
-    margin: 5px auto 30px auto; 
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.95rem;
-    color: #444;
-    line-height: 1.7;
-    text-align: center;
-}
-
-.footer-bio p {
-    margin: 0;
-}
-
-.footer-bio a {
-    color: #1a1a1a;
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px solid #eee;
-    transition: all 0.3s ease;
-}
-
-.footer-bio a:hover {
-    border-bottom: 1px solid #1a1a1a;
-    background-color: #f9f9f9;
-    color: #000;
-}
     </style>
 </head>
 
@@ -233,14 +228,16 @@
     </a>
 
     <div class="footer-bio">
-        <p>
-            Estratega enfocado en la intersección entre tecnología, liderazgo y percepción. 
-            Exploro la <a href="https://inteligencia.com" target="_blank">Inteligencia</a>, 
-            la <a href="https://liderazgointerino.com" target="_blank">Dirección Interina</a> 
-            y la narrativa visual en <a href="https://coachdefoto.com" target="_blank">Coach de Foto</a>, 
-            como distintas formas de comprender una misma realidad.
-        </p>
-    </div>
+    <p>
+        Estratega enfocado en la intersección entre tecnología, liderazgo y percepción. 
+        Exploro la <a href="https://inteligencia.com" target="_blank">Inteligencia</a> aplicada, 
+        la <a href="https://liderazgointerino.com" target="_blank">Dirección Interina</a>, 
+        la narrativa visual en <a href="https://coachdefoto.com" target="_blank">Coach de Foto</a> 
+        y la música como otra forma de <a href="https://musica.sergiolubezky.com" target="_blank">comunicar</a>, 
+        bajo una misma premisa: encontrar <a href="https://unnuevopuntodevista.com" target="_blank">un nuevo punto de vista</a> 
+        para entender que todos estamos en <a href="https://elmismobarco.com">el mismo barco</a>.
+    </p>
+</div>
     
     <ul class="social-nav">
         <li><a href="https://www.linkedin.com/in/sergiolubezky/" target="_blank">LinkedIn</a></li>
@@ -248,6 +245,7 @@
         <li><a href="https://www.facebook.com/sergiolubezky/" target="_blank">Facebook</a></li>
         <li><a href="https://www.instagram.com/sergiolubezky/" target="_blank">Instagram</a></li>
         <li><a href="https://open.spotify.com/show/1aZSsv60nXP2XbemIVhVqk" target="_blank">Podcast</a></li>
+        <li><a href="https://musica.sergiolubezky.com" target="_blank">Música</a></li>
         <li><a href="https://coachdefoto.com" target="_blank">Fotografía</a></li>
     </ul>
 </footer>
