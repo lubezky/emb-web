@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://elmismobarco.com/">
 
     <!-- SCHEMA -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -17,7 +17,11 @@
       "@type": "Person",
       "@id": "https://lubezky.com/#sergio",
       "name": "Sergio Lubezky",
-      "url": "https://lubezky.com"
+      "url": "https://lubezky.com",
+      "sameAs": [
+        "https://lubezky.com",
+        "https://elmismobarco.com"
+      ]
     },
     {
       "@type": "WebSite",
@@ -25,6 +29,8 @@
       "url": "https://elmismobarco.com/",
       "name": "El mismo barco",
       "publisher": { "@id": "https://lubezky.com/#sergio" },
+      "about": { "@id": "https://lubezky.com/#sergio" },
+      "inLanguage": "es",
       "description": "Reflexiones sobre resiliencia, comunidad y el propósito compartido en tiempos de cambio."
     },
     {
@@ -33,18 +39,24 @@
       "url": "https://elmismobarco.com/",
       "name": "Reflexiones sobre Resiliencia y Comunidad",
       "author": { "@id": "https://lubezky.com/#sergio" },
+      "isPartOf": { "@id": "https://elmismobarco.com/#website" },
       "about": [
         { "@type": "Thing", "name": "Resiliencia Organizacional" },
         { "@type": "Thing", "name": "Empatía" },
         { "@type": "Thing", "name": "Liderazgo Humano" }
       ],
       "mentions": [
-        { "@type": "WebSite", "name": "Liderazgo Interino", "url": "https://liderazgointerino.com/" }
-      ]
+        {
+          "@type": "WebSite",
+          "name": "Liderazgo Interino",
+          "url": "https://liderazgointerino.com/"
+        }
+      ],
+      "inLanguage": "es"
     }
   ]
 }
-    </script>
+</script>
 
     <style>
         body { 
