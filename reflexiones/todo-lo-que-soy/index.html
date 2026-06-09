@@ -7,326 +7,187 @@
     <meta name="description" content="Una reflexión sobre aceptar la propia historia, con todo lo que implica.">
 
     <style>
-        body { 
-            margin: 0; 
-            display: flex; 
-            flex-direction: column; 
-            min-height: 100vh; 
-            background-color: #fff; 
-            color: #1a1a1a; 
-            font-family: 'Georgia', serif; 
-            line-height: 1.8; 
-        }
-
-        main { 
-            flex: 1; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 60px 20px; 
-        }
-
-        .content-box { 
-            max-width: 700px; 
-            text-align: center; 
-            font-size: 1.2rem; 
-        }
-
-        h1 { 
-            font-size: 1.5rem;
-            font-weight: bold; 
-            margin-bottom: 16px; 
-        }
-
-        p {
-            margin-bottom: 12px;
-        }
-
-        .content-box a { 
-            color: #000; 
-            text-decoration: none; 
-            font-weight: bold; 
-            border-bottom: 1px solid #ddd; 
-        }
-
-        .content-box a:hover { 
-            border-bottom: 1px solid #000; 
-        }
-
-        footer { 
-            padding: 60px 20px; 
-            text-align: center; 
-            font-family: 'Helvetica Neue', Arial, sans-serif; 
-        }
-
-        .profile-img { 
-            width: 75px; 
-            height: 75px; 
-            border-radius: 50%; 
-            margin-bottom: 10px; 
-            object-fit: cover; 
-            border: 1px solid #eee; 
-        }
-
-        .name-link { 
-            text-decoration: none; 
-            color: inherit; 
-            display: block; 
-            margin-bottom: 10px; 
-        }
-
-        .name { 
-            font-weight: 600; 
-            font-size: 1rem; 
-            letter-spacing: 1.5px; 
-            text-transform: uppercase; 
-        }
-
-        .social-nav { 
-            list-style: none; 
-            padding: 0; 
-            margin: 0; 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
-            gap: 12px; 
-            font-size: 0.85rem; 
-        }
-
-        .social-nav a { 
-            color: #666; 
-            text-decoration: none; 
-        }
-
-        .social-nav a:hover { 
-            color: #000; 
-        }
-
-        .social-nav li:not(:last-child)::after { 
-            content: "-"; 
-            margin-left: 12px; 
-            color: #ccc; 
-        }
-
-
-/* --- Estilos Finales Footer Sergio Lubezky --- */
-footer { 
-    padding: 60px 20px; 
-    text-align: center; 
-    font-family: 'Helvetica Neue', Arial, sans-serif; 
-}
-
-.name-link { 
-    text-decoration: none; 
-    color: inherit; 
-    display: block; 
-    margin-bottom: 2px; /* Espacio mínimo debajo del nombre */
-}
-
-.name { 
-    font-weight: 600; 
-    font-size: 1rem; 
-    letter-spacing: 1.5px; 
-    text-transform: uppercase; 
-}
-
-.footer-bio {
-    max-width: 650px;
-    margin: 0 auto 30px auto; /* 0 arriba para pegarlo al nombre */
-    font-size: 0.95rem;
-    color: #444;
-    line-height: 1.7;
-}
-
-.footer-bio p {
-    margin: 0;
-}
-
-.footer-bio a {
-    color: #1a1a1a;
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px solid #eee;
-    transition: all 0.3s ease;
-}
-
-.footer-bio a:hover {
-    border-bottom: 1px solid #1a1a1a;
-    background-color: #f9f9f9;
-    color: #000;
-}
-/* -------------------------------------------- */
-
+        body { margin: 0; display: flex; flex-direction: column; min-height: 100vh; background-color: #fff; color: #1a1a1a; font-family: 'Georgia', serif; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+        main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 80px 20px 40px 20px; }
+        .content-box { max-width: 750px; font-size: 1.15rem; }
+        h1 { font-size: 2rem; font-weight: bold; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 2px; text-align: center; font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.3; }
+        p { margin-bottom: 20px; text-align: justify; }
+        p.lyrics { text-align: center; margin-bottom: 20px; }
+        em { font-style: italic; }
         
+        .content-box a { color: #000; text-decoration: none; font-weight: bold; border-bottom: 1px solid #ddd; transition: border-color 0.3s; }
+        .content-box a:hover { border-bottom: 1px solid #1a1a1a; }
+        
+        .back-to-domain { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; }
+        .back-to-domain a { color: #000; text-decoration: none; font-weight: bold; border-bottom: 1px solid #ddd; transition: border-color 0.3s; }
+        .back-to-domain a:hover { border-bottom: 1px solid #1a1a1a; }
+
+        footer { padding: 60px 20px 40px 20px; background-color: #ffffff; border-top: 1px solid #f2f2f2; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.9rem; line-height: 1.6; }
+        .footer-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; text-align: left; }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 35px; text-align: center; } }
+        .footer-col h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #888; margin-top: 0; margin-bottom: 20px; }
+        .footer-col p { color: #555; margin: 0; font-size: 0.9rem; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a { color: #1a1a1a; text-decoration: none; font-weight: 600; border-bottom: 1px solid #eee; transition: all 0.3s; }
+        .footer-col ul li a:hover { border-bottom: 1px solid #1a1a1a; }
+        .footer-col ul li a.current-location { color: #d32f2f !important; border-bottom: 1px solid #f9ebeb; }
+        .footer-col ul li a.current-location:hover { border-bottom: 1px solid #d32f2f; }
+        .footer-socials { display: flex; gap: 15px; margin-top: 20px; }
+        @media (max-width: 768px) { .footer-socials { justify-content: center; } }
+        .footer-socials a { color: #666; text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+        .footer-socials a:hover { color: #000; }
+        
+        .footer-bottom { max-width: 900px; margin: 25px auto 0 auto; padding-top: 20px; border-top: 1px solid #f9f9f9; text-align: center; font-size: 0.8rem; color: #999; }
+        .footer-bottom p { text-align: center; margin: 0 auto; display: block; }
     </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+    <script type="application/ld+json">
     {
-      "@type": "Person",
-      "@id": "https://lubezky.com/#sergio",
-      "name": "Sergio Lubezky",
-      "url": "https://lubezky.com"
-    },
-    {
-      "@type": "Article",
-      "@id": "https://elmismobarco.com/reflexiones/todo-lo-que-soy/#article",
-      "headline": "Todo lo que soy: Una reflexión sobre la propia historia",
-      "author": { "@id": "https://lubezky.com/#sergio" },
-      "publisher": { "@id": "https://lubezky.com/#sergio" },
-      "url": "https://elmismobarco.com/reflexiones/todo-lo-que-soy/",
-      "mainEntityOfPage": "https://elmismobarco.com/reflexiones/todo-lo-que-soy/",
-      "description": "Una reconciliación con la historia personal y profesional a través de la música y la palabra.",
-      "about": [
-        { "@type": "Thing", "name": "Resiliencia" },
-        { "@type": "Thing", "name": "Aceptación" }
-      ]
-    },
-    {
-      "@type": "MusicRecording",
-      "name": "Todo lo que soy",
-      "byArtist": { "@id": "https://lubezky.com/#sergio" },
-      "url": "https://music.youtube.com/watch?v=x2k6J-6-VYg",
-      "sameAs": [
-        "https://music.apple.com/us/song/todo-lo-que-soy/1872882394",
-        "https://open.spotify.com/album/4OrfkgQD4dkQc2gsOj47RY?si=KKDaM-HyQT2z1ndH2ckOzA"
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://lubezky.com/#sergio",
+          "name": "Sergio Lubezky",
+          "url": "https://lubezky.com"
+        },
+        {
+          "@type": "Article",
+          "@id": "https://elmismobarco.com/reflexiones/todo-lo-que-soy/#article",
+          "headline": "Todo lo que soy: Una reflexión sobre la propia historia",
+          "author": { "@id": "https://lubezky.com/#sergio" },
+          "publisher": { "@id": "https://lubezky.com/#sergio" },
+          "url": "https://elmismobarco.com/reflexiones/todo-lo-que-soy/",
+          "mainEntityOfPage": "https://elmismobarco.com/reflexiones/todo-lo-que-soy/",
+          "description": "Una reconciliación con la historia personal y profesional a través de la música y la palabra.",
+          "about": [
+            { "@type": "Thing", "name": "Resiliencia" },
+            { "@type": "Thing", "name": "Aceptación" }
+          ]
+        },
+        {
+          "@type": "MusicRecording",
+          "name": "Todo lo que soy",
+          "byArtist": { "@id": "https://lubezky.com/#sergio" },
+          "url": "https://music.youtube.com/watch?v=x2k6J-6-VYg",
+          "sameAs": [
+            "https://music.apple.com/us/song/todo-lo-que-soy/1872882394",
+            "https://open.spotify.com/album/4OrfkgQD4dkQc2gsOj47RY?si=KKDaM-HyQT2z1ndH2ckOzA"
+          ]
+        }
       ]
     }
-  ]
-}
-</script>
-
-
+    </script>
 </head>
-
 <body>
 
 <main>
     <div class="content-box">
         <h1>Todo lo que soy</h1>
 
-        <p>
-            Hay una relación compleja con la propia historia. Con lo que uno ha sido, con lo que ha hecho bien y con lo que no.
-        </p>
+        <p>Hay una relación compleja con la propia historia. Con lo que uno ha sido, con lo que ha hecho bien y con lo que no.</p>
 
-        <p>
-            A veces se mira hacia atrás con juicio. Pensando en lo que pudo haber sido distinto, en los errores, en las decisiones que, en su momento, no parecían las correctas.
-        </p>
+        <p>A veces se mira hacia atrás con juicio. Pensando en lo que pudo haber sido distinto, en los errores, en las decisiones que, en su momento, no parecían las correctas.</p>
 
-        <p>
-            Y sin embargo, con el tiempo, algo empieza a cambiar.
-        </p>
+        <p>Y sin embargo, con el tiempo, algo empieza a cambiar.</p>
 
-        <p>
-            No porque la historia se reescriba, sino porque se entiende de otra forma. Porque poco a poco se vuelve evidente que nada de eso estuvo aislado, que cada experiencia —incluso las más difíciles— fue parte de algo más amplio.
-        </p>
+        <p>No porque la historia se reescriba, sino porque se entiende de otra forma. Porque poco a poco se vuelve evidente que nada de eso estuvo aislado, que cada experiencia —incluso las más difíciles— fue parte de algo más amplio.</p>
 
-        <p>
-            No siempre es inmediato. A veces toma años llegar a ese punto.
-        </p>
+        <p>No siempre es inmediato. A veces toma años llegar a ese punto.</p>
 
-        <p>
-            Pero cuando ocurre, aparece una especie de reconciliación. No perfecta, no total, pero suficiente para dejar de pelear con lo que ya fue.
-        </p>
+        <p>Pero cuando ocurre, aparece una especie de reconciliación. No perfecta, no total, pero suficiente para dejar de pelear con lo que ya fue.</p>
 
-        <p>
-            Y en ese lugar, surge algo distinto: la posibilidad de aceptar la propia historia sin necesidad de corregirla.
-        </p>
+        <p>Y en ese lugar, surge algo distinto: la posibilidad de aceptar la propia historia sin necesidad de corregirla.</p>
 
-        <p>
-            Esta canción nace desde ahí.
-        </p>
+        <p>Esta canción nace desde ahí.</p>
 
-        <p>
-            No como una conclusión definitiva, sino como una forma de reconocer el camino recorrido, con todo lo que implicó.
-        </p>
+        <p>No como una conclusión definitiva, sino como una forma de reconocer el camino recorrido, con todo lo que implicó.</p>
 
-        <p><em>
+        <p class="lyrics"><em>
             No soy perfecto nunca lo fui<br>
             tengo batallas dentro de mí<br>
             He dudado más de una vez<br>
             pero aquí estoy sigo en pie
         </em></p>
 
-        <p><em>
+        <p class="lyrics"><em>
             Cicatrices que hablan de ayer<br>
             errores que me hicieron creer<br>
             que incluso cayendo aprendí<br>
             a levantarme y seguir
         </em></p>
 
-        <p><em>
+        <p class="lyrics"><em>
             Hoy celebro ser quien soy<br>
             con lo bueno y lo que no<br>
             No cambiaría mi historia<br>
             porque me trajo hasta hoy
         </em></p>
 
-        <p>
-            Más que una afirmación, es un proceso.
-        </p>
+        <p>Más que una afirmación, es un proceso.</p>
 
-        <p>
-            Una forma de entender que lo vivido no fue un obstáculo, sino parte de la construcción.
-        </p>
+        <p>Una forma de entender que lo vivido no fue un obstáculo, sino parte de la construcción.</p>
 
-        <p>
-            Y que, incluso en lo que no salió como se esperaba, había algo que estaba tomando forma.
-        </p>
+        <p>Y que, incluso en lo que no salió como se esperaba, había algo que estaba tomando forma.</p>
 
-        <p>
-            Si quieres escuchar la pieza completa, puedes encontrarla aquí:
-        </p>
+        <p>Si quieres escuchar la pieza completa, puedes encontrarla aquí:</p>
 
-        <p>
+        <p style="text-align: center; font-weight: bold; margin-bottom: 20px;">
             <a href="https://open.spotify.com/album/4OrfkgQD4dkQc2gsOj47RY?si=KKDaM-HyQT2z1ndH2ckOzA" target="_blank">Spotify</a> ·
             <a href="https://music.apple.com/us/song/todo-lo-que-soy/1872882394" target="_blank">Apple Music</a> ·
             <a href="https://music.youtube.com/watch?v=x2k6J-6-VYg&si=Cd1b8UNm0pFzpd8_" target="_blank">YouTube Music</a>
         </p>
 
-        <p>
-            Esta misma idea también aparece cuando se trata de aceptar lo que aún no está resuelto en <a href="/reflexiones/no-todo-tiene-que-estar-resuelto/">no todo tiene que estar resuelto</a>.
-        </p>
+        <p>Esta misma idea también aparece cuando se trata de aceptar lo que aún no está resuelto en <a href="/reflexiones/no-todo-tiene-que-estar-resuelto/">no todo tiene que estar resuelto</a>.</p>
 
-        <p>
-            Y en la forma en que muchas veces se intenta entender todo demasiado pronto, como se explora en <a href="/reflexiones/a-veces-no-necesitas-respuestas/">a veces no necesitas respuestas</a>.
-        </p>
+        <p>Y en la forma en que muchas veces se intenta entender todo demasiado pronto, como se explora en <a href="/reflexiones/a-veces-no-necesitas-respuestas/">a veces no necesitas respuestas</a>.</p>
 
-        <p>
-            Si quieres ver todas las reflexiones, puedes regresar a <a href="/reflexiones/">reflexiones</a>, o volver al <a href="/">inicio</a>.
-        </p>
-
+        <div class="back-to-domain">
+            <a href="/reflexiones/">Volver a reflexiones</a> · <a href="/">Volver al inicio</a>
+        </div>
     </div>
 </main>
 
 <footer>
-    <img src="https://lubezky.com/foto-sergio.jpg" alt="Sergio Lubezky A." class="profile-img">
-    
-    <a href="https://lubezky.com" class="name-link">
-        <span class="name">Sergio Lubezky A.</span>
-    </a>
-
-    <div class="footer-bio">
-        <p>
-            Estratega enfocado en la intersección entre tecnología, liderazgo y percepción. 
-            Exploro la <a href="https://inteligencia.com" target="_blank">Inteligencia</a> aplicada, 
-            la <a href="https://liderazgointerino.com" target="_blank">Dirección Interina</a> en crisis 
-            y la narrativa visual en <a href="https://coachdefoto.com" target="_blank">Coach de Foto</a>. 
-            Todo bajo una misma premisa: la búsqueda de <a href="https://unnuevopuntodevista.com" target="_blank">Un Nuevo Punto de Vista</a> 
-            para entender que, al final, todos estamos en <a href="https://elmismobarco.com">El Mismo Barco</a>.
-        </p>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h3>Sergio Lubezky A.</h3>
+            <p>Estratega enfocado en la intersección entre tecnología, liderazgo y percepción. Exploro cómo los sistemas complejos, los equipos de trabajo y las ideas colectivas se coordinan para transformar crisis operativas en ventajas estratégicas resilientes.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/sergiolubezky/" target="_blank">LinkedIn</a>
+                <a href="https://x.com/slubezky" target="_blank">X</a>
+                <a href="https://www.facebook.com/sergiolubezky/" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/sergiolubezky/" target="_blank">Instagram</a>
+                <a href="https://open.spotify.com/show/1aZSsv60nXP2XbemIVhVqk" target="_blank">Podcast</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Contenido</h3>
+            <ul>
+                <li><a href="/reflexiones/a-veces-no-necesitas-respuestas/">A veces no necesitas respuestas</a></li>
+                <li><a href="/reflexiones/hay-dias-en-los-que-no-sabes/">Hay días en los que no sabes</a></li>
+                <li><a href="/reflexiones/no-todo-tiene-que-estar-resuelto/">No todo tiene que estar resuelto</a></li>
+                <li><a href="/reflexiones/todo-lo-que-soy/" class="current-location">Todo lo que soy</a></li>
+                <li><a href="https://lubezky.com/mapa/">Mapa del Ecosistema</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Ecosistema</h3>
+            <ul>
+                <li><a href="https://lubezky.com">Lubezky.com</a></li>
+                <li><a href="https://inteligencia.com">Inteligencia</a></li>
+                <li><a href="https://liderazgointerino.com">Liderazgo Interino</a></li>
+                <li><a href="https://coachdefoto.com">Coach de Foto</a></li>
+                <li><a href="https://elmismobarco.com/" class="current-location">El Mismo Barco</a></li>
+                <li><a href="https://unnuevopuntodevista.com">Un Nuevo Punto de Vista</a></li>
+                <li><a href="https://musica.sergiolubezky.com">Música</a></li>
+            </ul>
+        </div>
     </div>
-    
-    <ul class="social-nav">
-        <li><a href="https://www.linkedin.com/in/sergiolubezky/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://x.com/slubezky" target="_blank">X</a></li>
-        <li><a href="https://www.facebook.com/sergiolubezky/" target="_blank">Facebook</a></li>
-        <li><a href="https://www.instagram.com/sergiolubezky/" target="_blank">Instagram</a></li>
-        <li><a href="https://open.spotify.com/show/1aZSsv60nXP2XbemIVhVqk" target="_blank">Podcast</a></li>
-        <li><a href="https://coachdefoto.com" target="_blank">Fotografía</a></li>
-    </ul>
+    <div class="footer-bottom">
+        <p>© 2026 Sergio Lubezky A. Todos los derechos reservados.</p>
+    </div>
 </footer>
 
 </body>
