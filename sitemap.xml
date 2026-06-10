@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://elmismobarco.com/</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://elmismobarco.com/reflexiones/</loc>
+    <loc>https://elmismobarco.com/reflexiones/a-veces-no-necesitas-respuestas</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://elmismobarco.com/reflexiones/hay-dias-en-los-que-no-sabes/</loc>
+    <loc>https://elmismobarco.com/reflexiones/hay-dias-en-los-que-no-sabes</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://elmismobarco.com/reflexiones/a-veces-no-necesitas-respuestas/</loc>
+    <loc>https://elmismobarco.com/reflexiones/no-todo-tiene-que-estar-resuelto</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://elmismobarco.com/reflexiones/no-todo-tiene-que-estar-resuelto/</loc>
-  </url>
-
-  <url>
-    <loc>https://elmismobarco.com/reflexiones/todo-lo-que-soy/</loc>
+    <loc>https://elmismobarco.com/reflexiones/todo-lo-que-soy</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 
 </urlset>
